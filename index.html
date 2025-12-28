@@ -1,396 +1,175 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Андрей & Анастасия — Свадебное приглашение</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Андрей & Анастасия</title>
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400&display=swap');
 
-  <style>
-    /* Reset */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-    /* Animations */
-    @keyframes slideUp {
-      from {
-        opacity: 0;
-        transform: translateY(40px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+body {
+  background: #dfe3dc;
+  font-family: 'Inter', sans-serif;
+  color: #2e2e2e;
+}
 
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
+.wrapper {
+  min-height: 100vh;
+  padding: 20px;
+  background: #7f8a76;
+}
 
-    /* Base styles */
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #ffffff;
-      color: #1a1a1a;
-      line-height: 1.7;
-      font-weight: 300;
-    }
+.card {
+  background: #f6f7f4;
+  padding: 50px 24px;
+  max-width: 420px;
+  margin: 0 auto;
+}
 
-    .page {
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 80px 40px;
-    }
+.center {
+  text-align: center;
+}
 
-    .center {
-      text-align: center;
-    }
+.initials {
+  font-family: 'Playfair Display', serif;
+  font-size: 64px;
+  letter-spacing: 6px;
+  margin-bottom: 10px;
+}
 
-    /* Divider line */
-    .divider {
-      width: 60px;
-      height: 1px;
-      background: #e0e0e0;
-      margin: 60px auto;
-      opacity: 0;
-      animation: fadeIn 0.8s ease forwards;
-      animation-delay: 0.3s;
-    }
+.names {
+  font-size: 13px;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+}
 
-    .divider-wide {
-      width: 100%;
-    }
+.invite {
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
 
-    /* Header section */
-    .header {
-      opacity: 0;
-      animation: slideUp 1s ease forwards;
-      animation-delay: 0.1s;
-    }
+.date {
+  font-size: 20px;
+  margin-bottom: 40px;
+}
 
-    .initials {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 72px;
-      font-weight: 300;
-      letter-spacing: 12px;
-      margin-bottom: 20px;
-      color: #1a1a1a;
-    }
+.timer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
 
-    .names {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 13px;
-      letter-spacing: 6px;
-      text-transform: uppercase;
-      color: #666;
-      margin-bottom: 60px;
-    }
+.timer div {
+  text-align: center;
+  flex: 1;
+}
 
-    .invite-title {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 11px;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      color: #666;
-      margin-bottom: 16px;
-    }
+.timer span {
+  font-size: 20px;
+  display: block;
+}
 
-    .date {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 28px;
-      font-weight: 300;
-      letter-spacing: 4px;
-      color: #1a1a1a;
-    }
+.timer small {
+  font-size: 10px;
+  letter-spacing: 1px;
+}
 
-    /* Timer section */
-    .timer-section {
-      opacity: 0;
-      animation: slideUp 1s ease forwards;
-      animation-delay: 0.3s;
-    }
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
 
-    .timer {
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
+p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
 
-    .timer-block {
-      width: 80px;
-      height: 80px;
-      border: 1px solid #e0e0e0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      transition: all 0.3s ease;
-    }
+.section {
+  margin-bottom: 60px;
+}
 
-    .timer-block:hover {
-      transform: scale(1.05);
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-      border-color: #1a1a1a;
-    }
+.section-title {
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
 
-    .timer-block span {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 24px;
-      font-weight: 400;
-      color: #1a1a1a;
-      display: block;
-    }
+.schedule-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  margin-bottom: 30px;
+}
 
-    .timer-block small {
-      font-size: 9px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: #666;
-      margin-top: 4px;
-    }
+.event {
+  margin-bottom: 35px;
+}
 
-    /* Content sections */
-    .section {
-      opacity: 0;
-      animation: slideUp 1s ease forwards;
-    }
+.event-time {
+  font-size: 13px;
+  margin-bottom: 6px;
+}
 
-    .section:nth-child(3) {
-      animation-delay: 0.5s;
-    }
+.event-name {
+  font-weight: 500;
+  margin-bottom: 6px;
+}
 
-    .section:nth-child(5) {
-      animation-delay: 0.7s;
-    }
-
-    .section:nth-child(7) {
-      animation-delay: 0.9s;
-    }
-
-    .section:nth-child(9) {
-      animation-delay: 1.1s;
-    }
-
-    h2 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 32px;
-      font-weight: 300;
-      margin-bottom: 30px;
-      letter-spacing: 2px;
-    }
-
-    p {
-      font-size: 15px;
-      color: #1a1a1a;
-      margin-bottom: 20px;
-      max-width: 480px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .highlight {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 18px;
-      font-weight: 400;
-      letter-spacing: 2px;
-      color: #1a1a1a;
-      margin-top: 10px;
-    }
-
-    /* Details section */
-    .details-title {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 11px;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      color: #666;
-      margin-bottom: 30px;
-    }
-
-    /* Schedule section */
-    .schedule-title {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 28px;
-      font-weight: 300;
-      margin-bottom: 50px;
-      letter-spacing: 2px;
-    }
-
-    .event {
-      margin-bottom: 50px;
-      padding: 30px;
-      border: 1px solid #e0e0e0;
-      transition: all 0.3s ease;
-    }
-
-    .event:hover {
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
-    }
-
-    .event-time {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 11px;
-      letter-spacing: 3px;
-      color: #666;
-      margin-bottom: 12px;
-    }
-
-    .event-name {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 18px;
-      font-weight: 500;
-      margin-bottom: 12px;
-      letter-spacing: 1px;
-    }
-
-    .event-location {
-      font-size: 14px;
-      color: #666;
-      margin-bottom: 16px;
-    }
-
-    .event-description {
-      font-size: 14px;
-      color: #1a1a1a;
-      margin-bottom: 0;
-    }
-
-    /* Footer */
-    .footer {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 36px;
-      font-weight: 300;
-      letter-spacing: 4px;
-      opacity: 0;
-      animation: slideUp 1s ease forwards;
-      animation-delay: 1.3s;
-    }
-
-    /* Responsive */
-    @media (max-width: 480px) {
-      .page {
-        padding: 60px 24px;
-      }
-
-      .initials {
-        font-size: 48px;
-        letter-spacing: 8px;
-      }
-
-      .names {
-        font-size: 11px;
-        letter-spacing: 4px;
-      }
-
-      .timer {
-        gap: 10px;
-      }
-
-      .timer-block {
-        width: 65px;
-        height: 65px;
-      }
-
-      .timer-block span {
-        font-size: 20px;
-      }
-
-      .timer-block small {
-        font-size: 8px;
-      }
-
-      h2 {
-        font-size: 26px;
-      }
-
-      .schedule-title {
-        font-size: 24px;
-      }
-
-      .footer {
-        font-size: 28px;
-      }
-    }
-  </style>
+.footer {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  margin-top: 40px;
+}
+</style>
 </head>
 
 <body>
 
-  <div class="page">
+<div class="wrapper">
+  <div class="card">
 
-    <!-- Header -->
-    <div class="center header">
-      <div class="initials">А + А</div>
-      <div class="names">Андрей & Анастасия</div>
+    <div class="center">
+      <div class="initials">Ж | Н</div>
+      <div class="names">АНДРЕЙ + АНАСТАСИЯ</div>
 
-      <div class="invite-title">Приглашаем на свадьбу</div>
-      <div class="date">01.02.2026</div>
-    </div>
+      <div class="invite">ПРИГЛАШАЕМ НА СВАДЬБУ</div>
+      <div class="date">01.02.26</div>
 
-    <div class="divider"></div>
-
-    <!-- Timer -->
-    <div class="center timer-section">
-      <div class="timer" id="timer">
-        <div class="timer-block">
-          <span id="weeks">00</span>
-          <small>недель</small>
-        </div>
-        <div class="timer-block">
-          <span id="days">00</span>
-          <small>дней</small>
-        </div>
-        <div class="timer-block">
-          <span id="hours">00</span>
-          <small>часов</small>
-        </div>
-        <div class="timer-block">
-          <span id="minutes">00</span>
-          <small>минут</small>
-        </div>
-        <div class="timer-block">
-          <span id="seconds">00</span>
-          <small>секунд</small>
-        </div>
+      <div class="timer">
+        <div><span id="w">00</span><small>недель</small></div>
+        <div><span id="d">00</span><small>дней</small></div>
+        <div><span id="h">00</span><small>часов</small></div>
+        <div><span id="m">00</span><small>минут</small></div>
+        <div><span id="s">00</span><small>секунд</small></div>
       </div>
     </div>
 
-    <div class="divider"></div>
-
-    <!-- Greeting -->
     <div class="section center">
-      <h2>Дорогой Гость!</h2>
+      <h2>Дорогой<br>Гость!</h2>
       <p>
         Мы рады сообщить Вам, что 01.02.2026 состоится самое главное торжество в
-        нашей жизни — день нашей свадьбы.
+        нашей жизни — день нашей свадьбы!
       </p>
       <p>
         Приглашаем Вас разделить с нами радость этого незабываемого дня.
       </p>
-      <p class="highlight">01.02.2026 в 13:00</p>
+      <p>01.02.2026 в 13:00</p>
     </div>
 
-    <div class="divider divider-wide"></div>
-
-    <!-- Details -->
     <div class="section center">
-      <div class="details-title">Детали</div>
+      <div class="section-title">ДЕТАЛИ</div>
       <p>
-        Мы будем благодарны, если в качестве подарка Вы поддержите нас вкладом в
-        начало нашей семейной жизни.
+        Мы будем благодарны, если в качестве подарка Вы поддержите нас вкладом
+        в начало нашей семейной жизни.
       </p>
       <p>
         Если Вы хотите преподнести нам цветы, то пусть это будут 3 белые розы,
@@ -398,72 +177,58 @@
       </p>
     </div>
 
-    <div class="divider divider-wide"></div>
-
-    <!-- Schedule -->
     <div class="section center">
-      <div class="schedule-title">Расписание</div>
+      <div class="schedule-title">Свадебное расписание</div>
 
       <div class="event">
-        <div class="event-time">13:00 / 01.02.2026</div>
+        <div class="event-time">13:00 · 01.02.2026</div>
         <div class="event-name">Торжественная роспись</div>
-        <div class="event-location">ЗАГС</div>
-        <p class="event-description">
+        <p>ЗАГС</p>
+        <p>
           Приглашаем вас разделить вместе с нами радость создания новой семьи.
         </p>
       </div>
 
       <div class="event">
-        <div class="event-time">15:00 / 01.02.2026</div>
+        <div class="event-time">15:00 · 01.02.2026</div>
         <div class="event-name">Банкет</div>
-        <div class="event-location">Ресторан ArtЯшок & La Veranda<br>Ленинградское шоссе, 39</div>
-        <p class="event-description">
+        <p>
+          Ресторан «ArtЯшок & La Veranda»<br>
+          Ленинградское шоссе, 39
+        </p>
+        <p>
           После росписи мы продолжим праздник за банкетом.
         </p>
       </div>
     </div>
 
-    <div class="divider"></div>
-
-    <!-- Footer -->
     <div class="center footer">
-      Ждём Вас
+      Ждём Вас!
     </div>
 
   </div>
+</div>
 
-  <script>
-    const weddingDate = new Date("2026-02-01T13:00:00");
+<script>
+const date = new Date("2026-02-01T13:00:00");
 
-    function updateTimer() {
-      const now = new Date();
-      const diff = weddingDate - now;
+setInterval(() => {
+  const now = new Date();
+  const diff = date - now;
 
-      if (diff <= 0) {
-        document.getElementById("weeks").textContent = "0";
-        document.getElementById("days").textContent = "0";
-        document.getElementById("hours").textContent = "0";
-        document.getElementById("minutes").textContent = "0";
-        document.getElementById("seconds").textContent = "0";
-        return;
-      }
+  const s = Math.floor(diff / 1000);
+  const m = Math.floor(s / 60);
+  const h = Math.floor(m / 60);
+  const d = Math.floor(h / 24);
+  const w = Math.floor(d / 7);
 
-      const seconds = Math.floor(diff / 1000);
-      const minutes = Math.floor(seconds / 60);
-      const hours = Math.floor(minutes / 60);
-      const days = Math.floor(hours / 24);
-      const weeks = Math.floor(days / 7);
-
-      document.getElementById("weeks").textContent = weeks;
-      document.getElementById("days").textContent = days % 7;
-      document.getElementById("hours").textContent = hours % 24;
-      document.getElementById("minutes").textContent = minutes % 60;
-      document.getElementById("seconds").textContent = seconds % 60;
-    }
-
-    updateTimer();
-    setInterval(updateTimer, 1000);
-  </script>
+  document.getElementById("w").textContent = w;
+  document.getElementById("d").textContent = d % 7;
+  document.getElementById("h").textContent = h % 24;
+  document.getElementById("m").textContent = m % 60;
+  document.getElementById("s").textContent = s % 60;
+}, 1000);
+</script>
 
 </body>
 </html>
