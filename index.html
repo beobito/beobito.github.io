@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Андрей & Анастасия — приглашение</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Times New Roman", serif;
+      background: #f5f5f2;
+      color: #2b2b2b;
+      line-height: 1.4;
+    }
+
+    .page {
+      max-width: 420px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 40px 24px;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .initials {
+      font-size: 64px;
+      letter-spacing: 6px;
+      margin-bottom: 10px;
+    }
+
+    .names {
+      font-size: 14px;
+      letter-spacing: 2px;
+      margin-bottom: 40px;
+    }
+
+    .invite-title {
+      font-size: 14px;
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+    }
+
+    .date {
+      font-size: 20px;
+      margin-bottom: 40px;
+    }
+
+    .timer {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 60px;
+      text-align: center;
+    }
+
+    .timer div {
+      flex: 1;
+    }
+
+    .timer span {
+      display: block;
+      font-size: 20px;
+    }
+
+    .timer small {
+      font-size: 11px;
+      letter-spacing: 1px;
+    }
+
+    h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 15px;
+      margin-bottom: 20px;
+    }
+
+    .section {
+      margin-bottom: 60px;
+    }
+
+    .details-title {
+      font-size: 18px;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+
+    .schedule-title {
+      font-size: 26px;
+      margin-bottom: 30px;
+    }
+
+    .event {
+      margin-bottom: 30px;
+    }
+
+    .event-time {
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+
+    .event-name {
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .footer {
+      font-size: 26px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="page">
+
+    <div class="center">
+      <div class="initials">К | Н</div>
+      <div class="names">АНДРЕЙ + АНАСТАСИЯ</div>
+
+      <div class="invite-title">ПРИГЛАШАЕМ НА СВАДЬБУ</div>
+      <div class="date">01.02.26</div>
+
+      <div class="timer" id="timer">
+        <div><span id="weeks">00</span><small>недель</small></div>
+        <div><span id="days">00</span><small>дней</small></div>
+        <div><span id="hours">00</span><small>часов</small></div>
+        <div><span id="minutes">00</span><small>минут</small></div>
+        <div><span id="seconds">00</span><small>секунд</small></div>
+      </div>
+    </div>
+
+    <div class="section center">
+      <h2>Дорогой<br>Гость!</h2>
+      <p>
+        Мы рады сообщить Вам, что 01.02.2026 состоится самое главное торжество в
+        нашей жизни — день нашей свадьбы!
+      </p>
+      <p>
+        Приглашаем Вас разделить с нами радость этого незабываемого дня.
+      </p>
+      <p>01.02.2026 в 13:00</p>
+    </div>
+
+    <div class="section center">
+      <div class="details-title">ДЕТАЛИ</div>
+      <p>
+        Мы будем благодарны, если в качестве подарка Вы поддержите нас вкладом в
+        начало нашей семейной жизни.
+      </p>
+      <p>
+        Если Вы хотите преподнести нам цветы, то пусть это будут 3 белые розы,
+        так у нас получится один роскошный букет.
+      </p>
+    </div>
+
+    <div class="section center">
+      <div class="schedule-title">Свадебное расписание</div>
+
+      <div class="event">
+        <div class="event-time">13:00 · 01.02.2026</div>
+        <div class="event-name">Торжественная роспись</div>
+        <p>ЗАГС</p>
+        <p>
+          Приглашаем вас разделить вместе с нами радость создания новой семьи.
+        </p>
+      </div>
+
+      <div class="event">
+        <div class="event-time">15:00 · 01.02.2026</div>
+        <div class="event-name">Банкет</div>
+        <p>Ресторан «ArtЯшок & La Veranda»<br>Ленинградское шоссе, 39</p>
+        <p>
+          После росписи мы продолжим праздник за банкетом.
+        </p>
+      </div>
+    </div>
+
+    <div class="center footer">
+      Ждём Вас!
+    </div>
+
+  </div>
+
+  <script>
+const weddingDate = new Date("2026-02-01T13:00:00");
+
+    function updateTimer() {
+      const now = new Date();
+      const diff = weddingDate - now;
+
+      if (diff <= 0) return;
+
+      const seconds = Math.floor(diff / 1000);
+      const minutes = Math.floor(seconds / 60);
+      const hours = Math.floor(minutes / 60);
+      const days = Math.floor(hours / 24);
+      const weeks = Math.floor(days / 7);
+
+      document.getElementById("weeks").textContent = weeks;
+      document.getElementById("days").textContent = days % 7;
+      document.getElementById("hours").textContent = hours % 24;
+      document.getElementById("minutes").textContent = minutes % 60;
+      document.getElementById("seconds").textContent = seconds % 60;
+    }
+
+    updateTimer();
+    setInterval(updateTimer, 1000);
+  </script>
+
+</body>
+</html>
