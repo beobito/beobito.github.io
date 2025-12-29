@@ -6,7 +6,7 @@
 <title>Андрей & Анастасия</title>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400&display=swap');
 
 * {
   box-sizing: border-box;
@@ -15,56 +15,51 @@
 }
 
 body {
-  background: #dfe3dc;
   font-family: 'Inter', sans-serif;
   color: #2e2e2e;
-}
-
-.wrapper {
-  min-height: 100vh;
-  padding: 20px;
   background: #7f8a76;
 }
 
-.card {
-  background: #f6f7f4;
-  padding: 50px 24px;
+.wrapper {
   max-width: 420px;
   margin: 0 auto;
+  min-height: 100vh;
 }
 
-.center {
+/* Секция 1: Белая */
+.card-white {
+  background: #ffffff;
+  padding: 50px 24px 40px;
   text-align: center;
 }
 
 .initials {
   font-family: 'Playfair Display', serif;
-  font-size: 64px;
+  font-size: 72px;
   letter-spacing: 6px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .names {
   font-size: 13px;
-  letter-spacing: 2px;
-  margin-bottom: 40px;
+  letter-spacing: 3px;
+  margin-bottom: 50px;
 }
 
 .invite {
   font-size: 12px;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   margin-bottom: 8px;
 }
 
 .date {
   font-size: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
 .timer {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 60px;
 }
 
 .timer div {
@@ -73,8 +68,9 @@ body {
 }
 
 .timer span {
-  font-size: 20px;
+  font-size: 28px;
   display: block;
+  font-weight: 300;
 }
 
 .timer small {
@@ -82,52 +78,87 @@ body {
   letter-spacing: 1px;
 }
 
-h2 {
+/* Секция 2: Оливковая */
+.card-olive {
+  background: #7f8a76;
+  padding: 50px 24px;
+  text-align: center;
+  color: #2e2e2e;
+}
+
+.card-olive h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 28px;
-  margin-bottom: 20px;
+  font-style: italic;
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 25px;
 }
 
-p {
+.card-olive p {
   font-size: 14px;
-  line-height: 1.6;
+  line-height: 1.7;
   margin-bottom: 20px;
 }
 
-.section {
-  margin-bottom: 60px;
+.card-olive .datetime {
+  font-size: 15px;
+  margin: 30px 0;
 }
 
 .section-title {
-  font-size: 16px;
-  letter-spacing: 2px;
-  margin-bottom: 20px;
+  font-size: 14px;
+  letter-spacing: 4px;
+  margin: 40px 0 20px;
+}
+
+.card-olive .footer {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 32px;
+  margin-top: 40px;
+}
+
+/* Секция 3: Серая */
+.card-gray {
+  background: #d9dbd6;
+  padding: 50px 24px;
 }
 
 .schedule-title {
   font-family: 'Playfair Display', serif;
-  font-size: 26px;
-  margin-bottom: 30px;
+  font-style: italic;
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 .event {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 20px;
   margin-bottom: 35px;
 }
 
 .event-time {
   font-size: 13px;
-  margin-bottom: 6px;
+  line-height: 1.5;
 }
 
-.event-name {
+.event-info .event-name {
   font-weight: 500;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
-.footer {
-  font-family: 'Playfair Display', serif;
-  font-size: 28px;
-  margin-top: 40px;
+.event-info .event-place {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.event-info p {
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0;
 }
 </style>
 </head>
@@ -135,78 +166,72 @@ p {
 <body>
 
 <div class="wrapper">
-  <div class="card">
 
-    <div class="center">
-      <div class="initials">Ж | Н</div>
-      <div class="names">АНДРЕЙ + АНАСТАСИЯ</div>
+  <!-- Секция 1: Белая карточка -->
+  <div class="card-white">
+    <div class="initials">Ж | Н</div>
+    <div class="names">АНДРЕЙ + АНАСТАСИЯ</div>
 
-      <div class="invite">ПРИГЛАШАЕМ НА СВАДЬБУ</div>
-      <div class="date">01.02.26</div>
+    <div class="invite">ПРИГЛАШАЕМ НА СВАДЬБУ</div>
+    <div class="date">01.02.26</div>
 
-      <div class="timer">
-        <div><span id="w">00</span><small>недель</small></div>
-        <div><span id="d">00</span><small>дней</small></div>
-        <div><span id="h">00</span><small>часов</small></div>
-        <div><span id="m">00</span><small>минут</small></div>
-        <div><span id="s">00</span><small>секунд</small></div>
-      </div>
+    <div class="timer">
+      <div><span id="w">00</span><small>недель</small></div>
+      <div><span id="d">00</span><small>дней</small></div>
+      <div><span id="h">00</span><small>часов</small></div>
+      <div><span id="m">00</span><small>минут</small></div>
+      <div><span id="s">00</span><small>секунд</small></div>
     </div>
-
-    <div class="section center">
-      <h2>Дорогой<br>Гость!</h2>
-      <p>
-        Мы рады сообщить Вам, что 01.02.2026 состоится самое главное торжество в
-        нашей жизни — день нашей свадьбы!
-      </p>
-      <p>
-        Приглашаем Вас разделить с нами радость этого незабываемого дня.
-      </p>
-      <p>01.02.2026 в 13:00</p>
-    </div>
-
-    <div class="section center">
-      <div class="section-title">ДЕТАЛИ</div>
-      <p>
-        Мы будем благодарны, если в качестве подарка Вы поддержите нас вкладом
-        в начало нашей семейной жизни.
-      </p>
-      <p>
-        Если Вы хотите преподнести нам цветы, то пусть это будут 3 белые розы,
-        так у нас получится один роскошный букет.
-      </p>
-    </div>
-
-    <div class="section center">
-      <div class="schedule-title">Свадебное расписание</div>
-
-      <div class="event">
-        <div class="event-time">13:00 · 01.02.2026</div>
-        <div class="event-name">Торжественная роспись</div>
-        <p>ЗАГС</p>
-        <p>
-          Приглашаем вас разделить вместе с нами радость создания новой семьи.
-        </p>
-      </div>
-
-      <div class="event">
-        <div class="event-time">15:00 · 01.02.2026</div>
-        <div class="event-name">Банкет</div>
-        <p>
-          Ресторан «ArtЯшок & La Veranda»<br>
-          Ленинградское шоссе, 39
-        </p>
-        <p>
-          После росписи мы продолжим праздник за банкетом.
-        </p>
-      </div>
-    </div>
-
-    <div class="center footer">
-      Ждём Вас!
-    </div>
-
   </div>
+
+  <!-- Секция 2: Оливковая -->
+  <div class="card-olive">
+    <h2>Дорогой<br>Гость!</h2>
+    <p>
+      Мы рады сообщить Вам, что 01.02.2026 состоится самое главное торжество в
+      нашей жизни - день нашей свадьбы!
+    </p>
+    <p>
+      Приглашаем Вас разделить с нами радость этого незабываемого дня.
+    </p>
+    <div class="datetime">01.02.2026 в 13:00</div>
+
+    <div class="section-title">Д Е Т А Л И</div>
+    <p>
+      Мы будем благодарны, если в качестве подарка Вы поддержите нас вкладом
+      в начало нашей семейной жизни.
+    </p>
+    <p>
+      Если Вы хотите преподнести нам цветы, то пусть это будут 3 белые розы,
+      так у нас получится один роскошный букет.
+    </p>
+
+    <div class="footer">Ждём Вас!</div>
+  </div>
+
+  <!-- Секция 3: Серая карточка -->
+  <div class="card-gray">
+    <div class="schedule-title">Свадебное расписание</div>
+
+    <div class="event">
+      <div class="event-time">13:00<br>01.02.2026</div>
+      <div class="event-info">
+        <div class="event-name">Торжественная роспись</div>
+        <div class="event-place">ЗАГС</div>
+        <p>Приглашаем вас разделить вместе с нами радость создания новой семьи.</p>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="event-time">15:00<br>01.02.2026</div>
+      <div class="event-info">
+        <div class="event-name">Банкет</div>
+        <div class="event-place">Ресторан "ArtЯшок & La Veranda",<br>Ленинградское шоссе, 39</div>
+        <p>После росписи мы продолжим праздник за банкетом.</p>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 <script>
