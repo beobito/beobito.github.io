@@ -24,13 +24,27 @@ body {
   max-width: 420px;
   margin: 0 auto;
   min-height: 100vh;
-  background: #ffffff;
-}
-
-/* Оливковая обёртка для второй секции */
-.olive-wrapper {
   background: #7f8a76;
   padding: 20px;
+}
+
+/* Разделитель между секциями */
+.divider {
+  display: flex;
+  justify-content: center;
+  padding: 25px 0;
+}
+
+.divider svg {
+  width: 100%;
+  height: 40px;
+}
+
+/* Карточка внутри оливкового фона */
+.card {
+  background: #ffffff;
+  padding: 100px 24px;
+  text-align: center;
 }
 
 /* Секция 1: Белая с инициалами */
@@ -48,9 +62,10 @@ body {
 }
 
 .names {
-  font-size: 15px;
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
   letter-spacing: 4px;
-  margin-bottom: 250px;
+  margin-bottom: 150px;
   color: #3d4a5d;
 }
 
@@ -58,14 +73,14 @@ body {
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 2px;
-  margin-bottom: 8px;
+  margin-bottom: 20px;
   color: #3d4a5d;
 }
 
 .date {
   font-size: 20px;
   font-weight: 300;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
   color: #3d4a5d;
 }
 
@@ -107,31 +122,31 @@ body {
   font-family: 'Cormorant Garamond', serif;
   font-size: 36px;
   font-weight: 400;
-  margin-bottom: 25px;
+  margin-bottom: 100px;
 }
 
 .card-invite p {
   font-size: 14px;
   line-height: 1.7;
-  margin-bottom: 20px;
+  margin-bottom: 80px;
   padding: 0 20px;
 }
 
 .card-invite .datetime {
   font-size: 15px;
-  margin: 30px 0;
+  margin: 100px 0;
 }
 
 .section-title {
   font-size: 18px;
   letter-spacing: 4px;
-  margin: 40px 0 20px;
+  margin: 0 0 80px;
 }
 
 .card-invite .footer {
   font-family: 'Playfair Display', serif;
   font-size: 28px;
-  margin-top: 40px;
+  margin-top: 100px;
 }
 
 /* Секция 3: Серая с расписанием */
@@ -140,18 +155,22 @@ body {
   padding: 50px 24px;
 }
 
+.card-schedule {
+  text-align: left;
+}
+
 .schedule-title {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 32px;
+  font-size: 28px;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
 }
 
 .event {
   display: grid;
-  grid-template-columns: 90px 1fr;
-  gap: 20px;
-  margin-bottom: 35px;
+  grid-template-columns: 75px 1fr;
+  gap: 10px;
+  margin-bottom: 70px;
 }
 
 .event-time {
@@ -162,15 +181,15 @@ body {
 
 .event-info .event-name {
   font-weight: 500;
-  margin-bottom: 4px;
-  padding-left: 20px;
+  margin-bottom: 2px;
+  padding-left: 10px;
 }
 
 .event-info .event-place {
-  font-size: 13px;
+  font-size: 12px;
   color: #555;
-  margin-bottom: 25px;
-  padding-left: 20px;
+  margin-bottom: 15px;
+  padding-left: 10px;
 }
 
 .event-info p {
@@ -185,9 +204,8 @@ body {
 
 <div class="wrapper">
 
-  <!-- Секция 1: Белая карточка с инициалами -->
-  <div class="card-white">
-    <div class="initials">Ж | Н</div>
+  <!-- Секция 1: Имена и таймер -->
+  <div class="card">
     <div class="names">АНДРЕЙ + АНАСТАСИЯ</div>
 
     <div class="invite">ПРИГЛАШАЕМ НА СВАДЬБУ</div>
@@ -202,75 +220,57 @@ body {
     </div>
   </div>
 
-  <!-- Секция 2: Оливковая обёртка с белой карточкой внутри -->
-  <div class="olive-wrapper">
-    <div class="card-invite">
-      <h2>Дорогой<br>Гость!</h2>
-      <p>
-        Мы рады сообщить Вам, что 01.02.2026 состоится самое главное торжество в
-        нашей жизни - день нашей свадьбы!<br>Приглашаем Вас разделить с нами радость этого незабываемого дня.
-      </p>
-      <div class="datetime">01.02.2026 в 13:00</div>
+  <div class="divider"><svg viewBox="0 0 400 40" preserveAspectRatio="xMidYMid meet">
+  <!-- Левая часть орнамента -->
+  <path d="M0 20 Q20 20 30 15 Q40 10 50 15 Q60 20 70 15 Q80 10 90 15 Q100 20 110 15 Q120 10 130 15 Q140 20 150 18" stroke="#ffffff" stroke-width="1" fill="none"/>
+  <path d="M30 15 Q35 5 45 8 Q50 10 50 15" stroke="#ffffff" stroke-width="1" fill="none"/>
+  <path d="M70 15 Q75 25 85 22 Q90 20 90 15" stroke="#ffffff" stroke-width="1" fill="none"/>
+  <path d="M110 15 Q115 5 125 8 Q130 10 130 15" stroke="#ffffff" stroke-width="1" fill="none"/>
+  <circle cx="50" cy="8" r="2" fill="#ffffff"/>
+  <circle cx="90" cy="22" r="2" fill="#ffffff"/>
+  <circle cx="130" cy="8" r="2" fill="#ffffff"/>
+  <!-- Центральный элемент -->
+  <circle cx="200" cy="20" r="5" fill="#ffffff"/>
+  <circle cx="200" cy="20" r="8" stroke="#ffffff" stroke-width="1" fill="none"/>
+  <path d="M185 20 Q175 15 165 20 Q155 25 150 18" stroke="#ffffff" stroke-width="1" fill="none"/>
+  <path d="M215 20 Q225 15 235 20 Q245 25 250 18" stroke="#ffffff" stroke-width="1" fill="none"/>
+  <path d="M185 20 Q175 25 165 20" stroke="#ffffff" stroke-width="1" fill="none"/>
+  <path d="M215 20 Q225 25 235 20" stroke="#ffffff" stroke-width="1" fill="none"/>
+  <!-- Правая часть орнамента -->
+  <path d="M400 20 Q380 20 370 15 Q360 10 350 15 Q340 20 330 15 Q320 10 310 15 Q300 20 290 15 Q280 10 270 15 Q260 20 250 18" stroke="#ffffff" stroke-width="1" fill="none"/>
+  <path d="M370 15 Q365 5 355 8 Q350 10 350 15" stroke="#ffffff" stroke-width="1" fill="none"/>
+  <path d="M330 15 Q325 25 315 22 Q310 20 310 15" stroke="#ffffff" stroke-width="1" fill="none"/>
+  <path d="M290 15 Q285 5 275 8 Q270 10 270 15" stroke="#ffffff" stroke-width="1" fill="none"/>
+  <circle cx="350" cy="8" r="2" fill="#ffffff"/>
+  <circle cx="310" cy="22" r="2" fill="#ffffff"/>
+  <circle cx="270" cy="8" r="2" fill="#ffffff"/>
+</svg></div>
 
-      <div class="section-title">ДЕТАЛИ</div>
-      <p>
-        Мы будем благодарны, если в качестве подарка Вы поддержите нас вкладом
-        в начало нашей семейной жизни.
-      </p>
-      <p>
-        Если Вы хотите преподнести нам цветы, то пусть это будут 3 белые розы,
-        так у нас получится один роскошный букет.
-      </p>
-
-      <div class="footer">Ждём Вас!</div>
-    </div>
+  <!-- Секция 2: Дорогой гость -->
+  <div class="card card-invite">
+    <h2>Дорогой<br>Гость!</h2>
+    <p>
+      Мы рады сообщить Вам, что 01.02.2026 состоится самое главное торжество в
+      нашей жизни - день нашей свадьбы!<br>Приглашаем Вас разделить с нами радость этого незабываемого дня.
+    </p>
+    <div class="datetime">01.02.2026 в 13:00</div>
   </div>
 
-  <!-- Секция 3: Серая карточка с расписанием -->
-  <div class="card-gray">
-    <div class="schedule-title">Свадебное расписание</div>
-
-    <div class="event">
-      <div class="event-time">13:00<br>01.02.2026</div>
-      <div class="event-info">
-        <div class="event-name">Торжественная роспись</div>
-        <div class="event-place">ЗАГС</div>
-        <p>Приглашаем вас разделить вместе с нами радость создания новой семьи.</p>
-      </div>
-    </div>
-
-    <div class="event">
-      <div class="event-time">15:00<br>01.02.2026</div>
-      <div class="event-info">
-        <div class="event-name">Банкет</div>
-        <div class="event-place">Ресторан "ArtЯшок & La Veranda",<br>Ленинградское шоссе, 39</div>
-        <p>После росписи мы продолжим праздник за банкетом.</p>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-<script>
-const date = new Date("2026-02-01T13:00:00");
-
-setInterval(() => {
-  const now = new Date();
-  const diff = date - now;
-
-  const s = Math.floor(diff / 1000);
-  const m = Math.floor(s / 60);
-  const h = Math.floor(m / 60);
-  const d = Math.floor(h / 24);
-  const w = Math.floor(d / 7);
-
-  document.getElementById("w").textContent = String(w).padStart(2, '0');
-  document.getElementById("d").textContent = String(d % 7).padStart(2, '0');
-  document.getElementById("h").textContent = String(h % 24).padStart(2, '0');
-  document.getElementById("m").textContent = String(m % 60).padStart(2, '0');
-  document.getElementById("s").textContent = String(s % 60).padStart(2, '0');
-}, 1000);
-</script>
-
-</body>
-</html>
+  <div class="divider"><svg viewBox="0 0 400 40" preserveAspectRatio="xMidYMid meet">
+  <!-- Левая часть орнамента -->
+  <path d="M0 20 Q20 20 30 15 Q40 10 50 15 Q60 20 70 15 Q80 10 90 15 Q100 20 110 15 Q120 10 130 15 Q140 20 150 18" stroke="#ffffff" stroke-width="1" fill="none"/>
+  <path d="M30 15 Q35 5 45 8 Q50 10 50 15" stroke="#ffffff" stroke-width="1" fill="none"/>
+  <path d="M70 15 Q75 25 85 22 Q90 20 90 15" stroke="#ffffff" stroke-width="1" fill="none"/>
+  <path d="M110 15 Q115 5 125 8 Q130 10 130 15" stroke="#ffffff" stroke-width="1" fill="none"/>
+  <circle cx="50" cy="8" r="2" fill="#ffffff"/>
+  <circle cx="90" cy="22" r="2" fill="#ffffff"/>
+  <circle cx="130" cy="8" r="2" fill="#ffffff"/>
+  <!-- Центральный элемент -->
+  <circle cx="200" cy="20" r="5" fill="#ffffff"/>
+  <circle cx="200" cy="20" r="8" stroke="#ffffff" stroke-width="1" fill="none"/>
+  <path d="M185 20 Q175 15 165 20 Q155 25 150 18" stroke="#ffffff" stroke-width="1" fill="none"/>
+  <path d="M215 20 Q225 15 235 20 Q245 25 250 18" stroke="#ffffff" stroke-width="1" fill="none"/>
+  <path d="M185 20 Q175 25 165 20" stroke="#ffffff" stroke-width="1" fill="none"/>
+  <path d="M215 20 Q225 25 235 20" stroke="#ffffff" stroke-width="1" fill="none"/>
+  <!-- Правая часть орнамента -->
+  <path d="M400 20 Q380 20 370 15 Q360 10 350 15 Q340 20 330 15 Q320 10 310 15 Q300 20 290 15 Q280 10 270 15 Q260 20 250 18" stroke="#ffffff" stroke-width="1" fill="none"/>
