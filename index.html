@@ -6,7 +6,7 @@
 <title>Андрей & Анастасия</title>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,400;1,500&display=swap');
 
 * {
   box-sizing: border-box;
@@ -27,41 +27,47 @@ body {
   background: #ffffff;
 }
 
-/* Оливковая рамка-разделитель */
-.olive-divider {
+/* Оливковая обёртка для второй секции */
+.olive-wrapper {
   background: #7f8a76;
-  height: 20px;
+  padding: 20px;
 }
 
 /* Секция 1: Белая с инициалами */
 .card-white {
   background: #ffffff;
-  padding: 50px 24px 40px;
+  padding: 80px 24px 50px;
   text-align: center;
 }
 
 .initials {
   font-family: 'Playfair Display', serif;
-  font-size: 72px;
+  font-size: 64px;
   letter-spacing: 6px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .names {
-  font-size: 13px;
-  letter-spacing: 3px;
-  margin-bottom: 50px;
+  font-size: 15px;
+  letter-spacing: 4px;
+  margin-bottom: 60px;
+  color: #3d4a5d;
 }
 
 .invite {
   font-size: 12px;
-  letter-spacing: 3px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-top: 40px;
   margin-bottom: 8px;
+  color: #3d4a5d;
 }
 
 .date {
   font-size: 20px;
-  margin-bottom: 50px;
+  font-weight: 300;
+  margin-bottom: 40px;
+  color: #3d4a5d;
 }
 
 .timer {
@@ -75,14 +81,16 @@ body {
 }
 
 .timer span {
-  font-size: 28px;
+  font-size: 32px;
   display: block;
   font-weight: 300;
+  color: #3d4a5d;
 }
 
 .timer small {
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 1px;
+  color: #3d4a5d;
 }
 
 /* Секция 2: Белая с текстом приглашения */
@@ -93,9 +101,8 @@ body {
 }
 
 .card-invite h2 {
-  font-family: 'Playfair Display', serif;
-  font-style: italic;
-  font-size: 32px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 36px;
   font-weight: 400;
   margin-bottom: 25px;
 }
@@ -112,15 +119,14 @@ body {
 }
 
 .section-title {
-  font-size: 14px;
+  font-size: 18px;
   letter-spacing: 4px;
   margin: 40px 0 20px;
 }
 
 .card-invite .footer {
   font-family: 'Playfair Display', serif;
-  font-style: italic;
-  font-size: 32px;
+  font-size: 28px;
   margin-top: 40px;
 }
 
@@ -131,9 +137,8 @@ body {
 }
 
 .schedule-title {
-  font-family: 'Playfair Display', serif;
-  font-style: italic;
-  font-size: 28px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
   text-align: center;
   margin-bottom: 40px;
 }
@@ -190,36 +195,32 @@ body {
     </div>
   </div>
 
-  <!-- Оливковый разделитель -->
-  <div class="olive-divider"></div>
+  <!-- Секция 2: Оливковая обёртка с белой карточкой внутри -->
+  <div class="olive-wrapper">
+    <div class="card-invite">
+      <h2>Дорогой<br>Гость!</h2>
+      <p>
+        Мы рады сообщить Вам, что 01.02.2026 состоится самое главное торжество в
+        нашей жизни - день нашей свадьбы!
+      </p>
+      <p>
+        Приглашаем Вас разделить с нами радость этого незабываемого дня.
+      </p>
+      <div class="datetime">01.02.2026 в 13:00</div>
 
-  <!-- Секция 2: Белая карточка с приглашением -->
-  <div class="card-invite">
-    <h2>Дорогой<br>Гость!</h2>
-    <p>
-      Мы рады сообщить Вам, что 01.02.2026 состоится самое главное торжество в
-      нашей жизни - день нашей свадьбы!
-    </p>
-    <p>
-      Приглашаем Вас разделить с нами радость этого незабываемого дня.
-    </p>
-    <div class="datetime">01.02.2026 в 13:00</div>
+      <div class="section-title">ДЕТАЛИ</div>
+      <p>
+        Мы будем благодарны, если в качестве подарка Вы поддержите нас вкладом
+        в начало нашей семейной жизни.
+      </p>
+      <p>
+        Если Вы хотите преподнести нам цветы, то пусть это будут 3 белые розы,
+        так у нас получится один роскошный букет.
+      </p>
 
-    <div class="section-title">Д Е Т А Л И</div>
-    <p>
-      Мы будем благодарны, если в качестве подарка Вы поддержите нас вкладом
-      в начало нашей семейной жизни.
-    </p>
-    <p>
-      Если Вы хотите преподнести нам цветы, то пусть это будут 3 белые розы,
-      так у нас получится один роскошный букет.
-    </p>
-
-    <div class="footer">Ждём Вас!</div>
+      <div class="footer">Ждём Вас!</div>
+    </div>
   </div>
-
-  <!-- Оливковый разделитель -->
-  <div class="olive-divider"></div>
 
   <!-- Секция 3: Серая карточка с расписанием -->
   <div class="card-gray">
@@ -259,11 +260,11 @@ setInterval(() => {
   const d = Math.floor(h / 24);
   const w = Math.floor(d / 7);
 
-  document.getElementById("w").textContent = w;
-  document.getElementById("d").textContent = d % 7;
-  document.getElementById("h").textContent = h % 24;
-  document.getElementById("m").textContent = m % 60;
-  document.getElementById("s").textContent = s % 60;
+  document.getElementById("w").textContent = String(w).padStart(2, '0');
+  document.getElementById("d").textContent = String(d % 7).padStart(2, '0');
+  document.getElementById("h").textContent = String(h % 24).padStart(2, '0');
+  document.getElementById("m").textContent = String(m % 60).padStart(2, '0');
+  document.getElementById("s").textContent = String(s % 60).padStart(2, '0');
 }, 1000);
 </script>
 
