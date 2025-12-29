@@ -32,12 +32,12 @@ body {
 .divider {
   display: flex;
   justify-content: center;
-  padding: 25px 0;
+  padding: 4px 0;
 }
 
 .divider svg {
   width: 100%;
-  height: 40px;
+  height: 60px;
 }
 
 /* Карточка внутри оливкового фона */
@@ -222,35 +222,55 @@ body {
     </div>
   </div>
 
-  <div class="divider"><svg viewBox="0 0 400 40" preserveAspectRatio="xMidYMid meet">
-  <!-- Левая часть орнамента -->
-  <path d="M0 20 Q20 20 30 15 Q40 10 50 15 Q60 20 70 15 Q80 10 90 15 Q100 20 110 15 Q120 10 130 15 Q140 20 150 18" stroke="#ffffff" stroke-width="1" fill="none"/>
-  <path d="M30 15 Q35 5 45 8 Q50 10 50 15" stroke="#ffffff" stroke-width="1" fill="none"/>
-  <path d="M70 15 Q75 25 85 22 Q90 20 90 15" stroke="#ffffff" stroke-width="1" fill="none"/>
-  <path d="M110 15 Q115 5 125 8 Q130 10 130 15" stroke="#ffffff" stroke-width="1" fill="none"/>
-  <circle cx="50" cy="8" r="2" fill="#ffffff"/>
-  <circle cx="90" cy="22" r="2" fill="#ffffff"/>
-  <circle cx="130" cy="8" r="2" fill="#ffffff"/>
-  <!-- Центральный элемент -->
-  <circle cx="200" cy="20" r="5" fill="#ffffff"/>
-  <circle cx="200" cy="20" r="8" stroke="#ffffff" stroke-width="1" fill="none"/>
-  <path d="M185 20 Q175 15 165 20 Q155 25 150 18" stroke="#ffffff" stroke-width="1" fill="none"/>
-  <path d="M215 20 Q225 15 235 20 Q245 25 250 18" stroke="#ffffff" stroke-width="1" fill="none"/>
-  <path d="M185 20 Q175 25 165 20" stroke="#ffffff" stroke-width="1" fill="none"/>
-  <path d="M215 20 Q225 25 235 20" stroke="#ffffff" stroke-width="1" fill="none"/>
-  <!-- Правая часть орнамента -->
-  <path d="M400 20 Q380 20 370 15 Q360 10 350 15 Q340 20 330 15 Q320 10 310 15 Q300 20 290 15 Q280 10 270 15 Q260 20 250 18" stroke="#ffffff" stroke-width="1" fill="none"/>
-  <path d="M370 15 Q365 5 355 8 Q350 10 350 15" stroke="#ffffff" stroke-width="1" fill="none"/>
-  <path d="M330 15 Q325 25 315 22 Q310 20 310 15" stroke="#ffffff" stroke-width="1" fill="none"/>
-  <path d="M290 15 Q285 5 275 8 Q270 10 270 15" stroke="#ffffff" stroke-width="1" fill="none"/>
-  <circle cx="350" cy="8" r="2" fill="#ffffff"/>
-  <circle cx="310" cy="22" r="2" fill="#ffffff"/>
-  <circle cx="270" cy="8" r="2" fill="#ffffff"/>
+  <div class="divider"><svg viewBox="0 0 400 60" preserveAspectRatio="xMidYMid meet">
+  <!-- Левая ветка к центру -->
+  <path d="M0 35 Q25 25 50 32 Q75 40 100 28 Q125 18 150 30 Q158 34 165 30" stroke="#ffffff" stroke-width="1.5" fill="none"/>
+  <!-- Правая ветка к центру -->
+  <path d="M400 35 Q375 25 350 32 Q325 40 300 28 Q275 18 250 30 Q242 34 235 30" stroke="#ffffff" stroke-width="1.5" fill="none"/>
+
+  <!-- Левая часть - веточки направлены к центру -->
+  <path d="M30 32 Q42 22 58 18" stroke="#ffffff" stroke-width="1" fill="none"/>
+  <path d="M58 18 Q65 15 68 22 Q62 22 58 18" stroke="#ffffff" stroke-width="0.8" fill="#ffffff" fill-opacity="0.4"/>
+  <path d="M58 18 Q62 12 56 8 Q54 14 58 18" stroke="#ffffff" stroke-width="0.8" fill="#ffffff" fill-opacity="0.4"/>
+
+  <path d="M75 38 Q88 46 105 44" stroke="#ffffff" stroke-width="1" fill="none"/>
+  <path d="M105 44 Q112 42 112 48 Q106 48 105 44" stroke="#ffffff" stroke-width="0.8" fill="#ffffff" fill-opacity="0.4"/>
+  <path d="M105 44 Q110 38 106 34 Q100 38 105 44" stroke="#ffffff" stroke-width="0.8" fill="#ffffff" fill-opacity="0.4"/>
+
+  <path d="M120 26 Q135 18 152 20" stroke="#ffffff" stroke-width="1" fill="none"/>
+  <path d="M152 20 Q160 18 160 24 Q154 24 152 20" stroke="#ffffff" stroke-width="0.8" fill="#ffffff" fill-opacity="0.4"/>
+  <path d="M152 20 Q158 14 152 10 Q148 14 152 20" stroke="#ffffff" stroke-width="0.8" fill="#ffffff" fill-opacity="0.4"/>
+
+  <path d="M150 32 Q158 38 165 36" stroke="#ffffff" stroke-width="1" fill="none"/>
+  <path d="M165 36 Q172 34 172 40 Q166 40 165 36" stroke="#ffffff" stroke-width="0.8" fill="#ffffff" fill-opacity="0.4"/>
+  <path d="M165 36 Q170 30 166 26 Q162 30 165 36" stroke="#ffffff" stroke-width="0.8" fill="#ffffff" fill-opacity="0.4"/>
+
+  <!-- Центральный кружок -->
+  <circle cx="200" cy="30" r="6" fill="none" stroke="#ffffff" stroke-width="1.5"/>
+  <circle cx="200" cy="30" r="3" fill="#ffffff"/>
+  <circle cx="200" cy="30" r="10" fill="none" stroke="#ffffff" stroke-width="0.5" stroke-dasharray="2,2"/>
+
+  <!-- Правая часть - веточки направлены к центру -->
+  <path d="M250 32 Q242 38 235 36" stroke="#ffffff" stroke-width="1" fill="none"/>
+  <path d="M235 36 Q228 34 228 40 Q234 40 235 36" stroke="#ffffff" stroke-width="0.8" fill="#ffffff" fill-opacity="0.4"/>
+  <path d="M235 36 Q230 30 234 26 Q238 30 235 36" stroke="#ffffff" stroke-width="0.8" fill="#ffffff" fill-opacity="0.4"/>
+
+  <path d="M280 26 Q265 18 248 20" stroke="#ffffff" stroke-width="1" fill="none"/>
+  <path d="M248 20 Q240 18 240 24 Q246 24 248 20" stroke="#ffffff" stroke-width="0.8" fill="#ffffff" fill-opacity="0.4"/>
+  <path d="M248 20 Q242 14 248 10 Q252 14 248 20" stroke="#ffffff" stroke-width="0.8" fill="#ffffff" fill-opacity="0.4"/>
+
+  <path d="M325 38 Q312 46 295 44" stroke="#ffffff" stroke-width="1" fill="none"/>
+  <path d="M295 44 Q288 42 288 48 Q294 48 295 44" stroke="#ffffff" stroke-width="0.8" fill="#ffffff" fill-opacity="0.4"/>
+  <path d="M295 44 Q290 38 294 34 Q300 38 295 44" stroke="#ffffff" stroke-width="0.8" fill="#ffffff" fill-opacity="0.4"/>
+
+  <path d="M370 32 Q358 22 342 18" stroke="#ffffff" stroke-width="1" fill="none"/>
+  <path d="M342 18 Q335 15 332 22 Q338 22 342 18" stroke="#ffffff" stroke-width="0.8" fill="#ffffff" fill-opacity="0.4"/>
+  <path d="M342 18 Q338 12 344 8 Q346 14 342 18" stroke="#ffffff" stroke-width="0.8" fill="#ffffff" fill-opacity="0.4"/>
 </svg></div>
 
   <!-- Секция 2: Дорогой гость -->
   <div class="card card-invite">
-    <h2>Дорогой<br>Гость!</h2>
+    <h2>Дорогие<br>гости!</h2>
     <p>
       Мы рады сообщить Вам, что 01.02.2026 состоится самое главное торжество в
       нашей жизни - день нашей свадьбы!<br>Приглашаем Вас разделить с нами радость этого незабываемого дня.
@@ -258,30 +278,50 @@ body {
     <div class="datetime">01.02.2026 в 13:00</div>
   </div>
 
-  <div class="divider"><svg viewBox="0 0 400 40" preserveAspectRatio="xMidYMid meet">
-  <!-- Левая часть орнамента -->
-  <path d="M0 20 Q20 20 30 15 Q40 10 50 15 Q60 20 70 15 Q80 10 90 15 Q100 20 110 15 Q120 10 130 15 Q140 20 150 18" stroke="#ffffff" stroke-width="1" fill="none"/>
-  <path d="M30 15 Q35 5 45 8 Q50 10 50 15" stroke="#ffffff" stroke-width="1" fill="none"/>
-  <path d="M70 15 Q75 25 85 22 Q90 20 90 15" stroke="#ffffff" stroke-width="1" fill="none"/>
-  <path d="M110 15 Q115 5 125 8 Q130 10 130 15" stroke="#ffffff" stroke-width="1" fill="none"/>
-  <circle cx="50" cy="8" r="2" fill="#ffffff"/>
-  <circle cx="90" cy="22" r="2" fill="#ffffff"/>
-  <circle cx="130" cy="8" r="2" fill="#ffffff"/>
-  <!-- Центральный элемент -->
-  <circle cx="200" cy="20" r="5" fill="#ffffff"/>
-  <circle cx="200" cy="20" r="8" stroke="#ffffff" stroke-width="1" fill="none"/>
-  <path d="M185 20 Q175 15 165 20 Q155 25 150 18" stroke="#ffffff" stroke-width="1" fill="none"/>
-  <path d="M215 20 Q225 15 235 20 Q245 25 250 18" stroke="#ffffff" stroke-width="1" fill="none"/>
-  <path d="M185 20 Q175 25 165 20" stroke="#ffffff" stroke-width="1" fill="none"/>
-  <path d="M215 20 Q225 25 235 20" stroke="#ffffff" stroke-width="1" fill="none"/>
-  <!-- Правая часть орнамента -->
-  <path d="M400 20 Q380 20 370 15 Q360 10 350 15 Q340 20 330 15 Q320 10 310 15 Q300 20 290 15 Q280 10 270 15 Q260 20 250 18" stroke="#ffffff" stroke-width="1" fill="none"/>
-  <path d="M370 15 Q365 5 355 8 Q350 10 350 15" stroke="#ffffff" stroke-width="1" fill="none"/>
-  <path d="M330 15 Q325 25 315 22 Q310 20 310 15" stroke="#ffffff" stroke-width="1" fill="none"/>
-  <path d="M290 15 Q285 5 275 8 Q270 10 270 15" stroke="#ffffff" stroke-width="1" fill="none"/>
-  <circle cx="350" cy="8" r="2" fill="#ffffff"/>
-  <circle cx="310" cy="22" r="2" fill="#ffffff"/>
-  <circle cx="270" cy="8" r="2" fill="#ffffff"/>
+  <div class="divider"><svg viewBox="0 0 400 60" preserveAspectRatio="xMidYMid meet">
+  <!-- Левая ветка к центру -->
+  <path d="M0 35 Q25 25 50 32 Q75 40 100 28 Q125 18 150 30 Q158 34 165 30" stroke="#ffffff" stroke-width="1.5" fill="none"/>
+  <!-- Правая ветка к центру -->
+  <path d="M400 35 Q375 25 350 32 Q325 40 300 28 Q275 18 250 30 Q242 34 235 30" stroke="#ffffff" stroke-width="1.5" fill="none"/>
+
+  <!-- Левая часть - веточки направлены к центру -->
+  <path d="M30 32 Q42 22 58 18" stroke="#ffffff" stroke-width="1" fill="none"/>
+  <path d="M58 18 Q65 15 68 22 Q62 22 58 18" stroke="#ffffff" stroke-width="0.8" fill="#ffffff" fill-opacity="0.4"/>
+  <path d="M58 18 Q62 12 56 8 Q54 14 58 18" stroke="#ffffff" stroke-width="0.8" fill="#ffffff" fill-opacity="0.4"/>
+
+  <path d="M75 38 Q88 46 105 44" stroke="#ffffff" stroke-width="1" fill="none"/>
+  <path d="M105 44 Q112 42 112 48 Q106 48 105 44" stroke="#ffffff" stroke-width="0.8" fill="#ffffff" fill-opacity="0.4"/>
+  <path d="M105 44 Q110 38 106 34 Q100 38 105 44" stroke="#ffffff" stroke-width="0.8" fill="#ffffff" fill-opacity="0.4"/>
+
+  <path d="M120 26 Q135 18 152 20" stroke="#ffffff" stroke-width="1" fill="none"/>
+  <path d="M152 20 Q160 18 160 24 Q154 24 152 20" stroke="#ffffff" stroke-width="0.8" fill="#ffffff" fill-opacity="0.4"/>
+  <path d="M152 20 Q158 14 152 10 Q148 14 152 20" stroke="#ffffff" stroke-width="0.8" fill="#ffffff" fill-opacity="0.4"/>
+
+  <path d="M150 32 Q158 38 165 36" stroke="#ffffff" stroke-width="1" fill="none"/>
+  <path d="M165 36 Q172 34 172 40 Q166 40 165 36" stroke="#ffffff" stroke-width="0.8" fill="#ffffff" fill-opacity="0.4"/>
+  <path d="M165 36 Q170 30 166 26 Q162 30 165 36" stroke="#ffffff" stroke-width="0.8" fill="#ffffff" fill-opacity="0.4"/>
+
+  <!-- Центральный кружок -->
+  <circle cx="200" cy="30" r="6" fill="none" stroke="#ffffff" stroke-width="1.5"/>
+  <circle cx="200" cy="30" r="3" fill="#ffffff"/>
+  <circle cx="200" cy="30" r="10" fill="none" stroke="#ffffff" stroke-width="0.5" stroke-dasharray="2,2"/>
+
+  <!-- Правая часть - веточки направлены к центру -->
+  <path d="M250 32 Q242 38 235 36" stroke="#ffffff" stroke-width="1" fill="none"/>
+  <path d="M235 36 Q228 34 228 40 Q234 40 235 36" stroke="#ffffff" stroke-width="0.8" fill="#ffffff" fill-opacity="0.4"/>
+  <path d="M235 36 Q230 30 234 26 Q238 30 235 36" stroke="#ffffff" stroke-width="0.8" fill="#ffffff" fill-opacity="0.4"/>
+
+  <path d="M280 26 Q265 18 248 20" stroke="#ffffff" stroke-width="1" fill="none"/>
+  <path d="M248 20 Q240 18 240 24 Q246 24 248 20" stroke="#ffffff" stroke-width="0.8" fill="#ffffff" fill-opacity="0.4"/>
+  <path d="M248 20 Q242 14 248 10 Q252 14 248 20" stroke="#ffffff" stroke-width="0.8" fill="#ffffff" fill-opacity="0.4"/>
+
+  <path d="M325 38 Q312 46 295 44" stroke="#ffffff" stroke-width="1" fill="none"/>
+  <path d="M295 44 Q288 42 288 48 Q294 48 295 44" stroke="#ffffff" stroke-width="0.8" fill="#ffffff" fill-opacity="0.4"/>
+  <path d="M295 44 Q290 38 294 34 Q300 38 295 44" stroke="#ffffff" stroke-width="0.8" fill="#ffffff" fill-opacity="0.4"/>
+
+  <path d="M370 32 Q358 22 342 18" stroke="#ffffff" stroke-width="1" fill="none"/>
+  <path d="M342 18 Q335 15 332 22 Q338 22 342 18" stroke="#ffffff" stroke-width="0.8" fill="#ffffff" fill-opacity="0.4"/>
+  <path d="M342 18 Q338 12 344 8 Q346 14 342 18" stroke="#ffffff" stroke-width="0.8" fill="#ffffff" fill-opacity="0.4"/>
 </svg></div>
 
   <!-- Секция 3: Свадебное расписание -->
@@ -307,30 +347,50 @@ body {
     </div>
   </div>
 
-  <div class="divider"><svg viewBox="0 0 400 40" preserveAspectRatio="xMidYMid meet">
-  <!-- Левая часть орнамента -->
-  <path d="M0 20 Q20 20 30 15 Q40 10 50 15 Q60 20 70 15 Q80 10 90 15 Q100 20 110 15 Q120 10 130 15 Q140 20 150 18" stroke="#ffffff" stroke-width="1" fill="none"/>
-  <path d="M30 15 Q35 5 45 8 Q50 10 50 15" stroke="#ffffff" stroke-width="1" fill="none"/>
-  <path d="M70 15 Q75 25 85 22 Q90 20 90 15" stroke="#ffffff" stroke-width="1" fill="none"/>
-  <path d="M110 15 Q115 5 125 8 Q130 10 130 15" stroke="#ffffff" stroke-width="1" fill="none"/>
-  <circle cx="50" cy="8" r="2" fill="#ffffff"/>
-  <circle cx="90" cy="22" r="2" fill="#ffffff"/>
-  <circle cx="130" cy="8" r="2" fill="#ffffff"/>
-  <!-- Центральный элемент -->
-  <circle cx="200" cy="20" r="5" fill="#ffffff"/>
-  <circle cx="200" cy="20" r="8" stroke="#ffffff" stroke-width="1" fill="none"/>
-  <path d="M185 20 Q175 15 165 20 Q155 25 150 18" stroke="#ffffff" stroke-width="1" fill="none"/>
-  <path d="M215 20 Q225 15 235 20 Q245 25 250 18" stroke="#ffffff" stroke-width="1" fill="none"/>
-  <path d="M185 20 Q175 25 165 20" stroke="#ffffff" stroke-width="1" fill="none"/>
-  <path d="M215 20 Q225 25 235 20" stroke="#ffffff" stroke-width="1" fill="none"/>
-  <!-- Правая часть орнамента -->
-  <path d="M400 20 Q380 20 370 15 Q360 10 350 15 Q340 20 330 15 Q320 10 310 15 Q300 20 290 15 Q280 10 270 15 Q260 20 250 18" stroke="#ffffff" stroke-width="1" fill="none"/>
-  <path d="M370 15 Q365 5 355 8 Q350 10 350 15" stroke="#ffffff" stroke-width="1" fill="none"/>
-  <path d="M330 15 Q325 25 315 22 Q310 20 310 15" stroke="#ffffff" stroke-width="1" fill="none"/>
-  <path d="M290 15 Q285 5 275 8 Q270 10 270 15" stroke="#ffffff" stroke-width="1" fill="none"/>
-  <circle cx="350" cy="8" r="2" fill="#ffffff"/>
-  <circle cx="310" cy="22" r="2" fill="#ffffff"/>
-  <circle cx="270" cy="8" r="2" fill="#ffffff"/>
+  <div class="divider"><svg viewBox="0 0 400 60" preserveAspectRatio="xMidYMid meet">
+  <!-- Левая ветка к центру -->
+  <path d="M0 35 Q25 25 50 32 Q75 40 100 28 Q125 18 150 30 Q158 34 165 30" stroke="#ffffff" stroke-width="1.5" fill="none"/>
+  <!-- Правая ветка к центру -->
+  <path d="M400 35 Q375 25 350 32 Q325 40 300 28 Q275 18 250 30 Q242 34 235 30" stroke="#ffffff" stroke-width="1.5" fill="none"/>
+
+  <!-- Левая часть - веточки направлены к центру -->
+  <path d="M30 32 Q42 22 58 18" stroke="#ffffff" stroke-width="1" fill="none"/>
+  <path d="M58 18 Q65 15 68 22 Q62 22 58 18" stroke="#ffffff" stroke-width="0.8" fill="#ffffff" fill-opacity="0.4"/>
+  <path d="M58 18 Q62 12 56 8 Q54 14 58 18" stroke="#ffffff" stroke-width="0.8" fill="#ffffff" fill-opacity="0.4"/>
+
+  <path d="M75 38 Q88 46 105 44" stroke="#ffffff" stroke-width="1" fill="none"/>
+  <path d="M105 44 Q112 42 112 48 Q106 48 105 44" stroke="#ffffff" stroke-width="0.8" fill="#ffffff" fill-opacity="0.4"/>
+  <path d="M105 44 Q110 38 106 34 Q100 38 105 44" stroke="#ffffff" stroke-width="0.8" fill="#ffffff" fill-opacity="0.4"/>
+
+  <path d="M120 26 Q135 18 152 20" stroke="#ffffff" stroke-width="1" fill="none"/>
+  <path d="M152 20 Q160 18 160 24 Q154 24 152 20" stroke="#ffffff" stroke-width="0.8" fill="#ffffff" fill-opacity="0.4"/>
+  <path d="M152 20 Q158 14 152 10 Q148 14 152 20" stroke="#ffffff" stroke-width="0.8" fill="#ffffff" fill-opacity="0.4"/>
+
+  <path d="M150 32 Q158 38 165 36" stroke="#ffffff" stroke-width="1" fill="none"/>
+  <path d="M165 36 Q172 34 172 40 Q166 40 165 36" stroke="#ffffff" stroke-width="0.8" fill="#ffffff" fill-opacity="0.4"/>
+  <path d="M165 36 Q170 30 166 26 Q162 30 165 36" stroke="#ffffff" stroke-width="0.8" fill="#ffffff" fill-opacity="0.4"/>
+
+  <!-- Центральный кружок -->
+  <circle cx="200" cy="30" r="6" fill="none" stroke="#ffffff" stroke-width="1.5"/>
+  <circle cx="200" cy="30" r="3" fill="#ffffff"/>
+  <circle cx="200" cy="30" r="10" fill="none" stroke="#ffffff" stroke-width="0.5" stroke-dasharray="2,2"/>
+
+  <!-- Правая часть - веточки направлены к центру -->
+  <path d="M250 32 Q242 38 235 36" stroke="#ffffff" stroke-width="1" fill="none"/>
+  <path d="M235 36 Q228 34 228 40 Q234 40 235 36" stroke="#ffffff" stroke-width="0.8" fill="#ffffff" fill-opacity="0.4"/>
+  <path d="M235 36 Q230 30 234 26 Q238 30 235 36" stroke="#ffffff" stroke-width="0.8" fill="#ffffff" fill-opacity="0.4"/>
+
+  <path d="M280 26 Q265 18 248 20" stroke="#ffffff" stroke-width="1" fill="none"/>
+  <path d="M248 20 Q240 18 240 24 Q246 24 248 20" stroke="#ffffff" stroke-width="0.8" fill="#ffffff" fill-opacity="0.4"/>
+  <path d="M248 20 Q242 14 248 10 Q252 14 248 20" stroke="#ffffff" stroke-width="0.8" fill="#ffffff" fill-opacity="0.4"/>
+
+  <path d="M325 38 Q312 46 295 44" stroke="#ffffff" stroke-width="1" fill="none"/>
+  <path d="M295 44 Q288 42 288 48 Q294 48 295 44" stroke="#ffffff" stroke-width="0.8" fill="#ffffff" fill-opacity="0.4"/>
+  <path d="M295 44 Q290 38 294 34 Q300 38 295 44" stroke="#ffffff" stroke-width="0.8" fill="#ffffff" fill-opacity="0.4"/>
+
+  <path d="M370 32 Q358 22 342 18" stroke="#ffffff" stroke-width="1" fill="none"/>
+  <path d="M342 18 Q335 15 332 22 Q338 22 342 18" stroke="#ffffff" stroke-width="0.8" fill="#ffffff" fill-opacity="0.4"/>
+  <path d="M342 18 Q338 12 344 8 Q346 14 342 18" stroke="#ffffff" stroke-width="0.8" fill="#ffffff" fill-opacity="0.4"/>
 </svg></div>
 
   <!-- Секция 4: Детали -->
