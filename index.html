@@ -17,16 +17,23 @@
 body {
   font-family: 'Inter', sans-serif;
   color: #2e2e2e;
-  background: #7f8a76;
+  background: #f5f5f2;
 }
 
 .wrapper {
   max-width: 420px;
   margin: 0 auto;
   min-height: 100vh;
+  background: #ffffff;
 }
 
-/* Секция 1: Белая */
+/* Оливковая рамка-разделитель */
+.olive-divider {
+  background: #7f8a76;
+  height: 20px;
+}
+
+/* Секция 1: Белая с инициалами */
 .card-white {
   background: #ffffff;
   padding: 50px 24px 40px;
@@ -78,15 +85,14 @@ body {
   letter-spacing: 1px;
 }
 
-/* Секция 2: Оливковая */
-.card-olive {
-  background: #7f8a76;
+/* Секция 2: Белая с текстом приглашения */
+.card-invite {
+  background: #ffffff;
   padding: 50px 24px;
   text-align: center;
-  color: #2e2e2e;
 }
 
-.card-olive h2 {
+.card-invite h2 {
   font-family: 'Playfair Display', serif;
   font-style: italic;
   font-size: 32px;
@@ -94,13 +100,13 @@ body {
   margin-bottom: 25px;
 }
 
-.card-olive p {
+.card-invite p {
   font-size: 14px;
   line-height: 1.7;
   margin-bottom: 20px;
 }
 
-.card-olive .datetime {
+.card-invite .datetime {
   font-size: 15px;
   margin: 30px 0;
 }
@@ -111,14 +117,14 @@ body {
   margin: 40px 0 20px;
 }
 
-.card-olive .footer {
+.card-invite .footer {
   font-family: 'Playfair Display', serif;
   font-style: italic;
   font-size: 32px;
   margin-top: 40px;
 }
 
-/* Секция 3: Серая */
+/* Секция 3: Серая с расписанием */
 .card-gray {
   background: #d9dbd6;
   padding: 50px 24px;
@@ -167,7 +173,7 @@ body {
 
 <div class="wrapper">
 
-  <!-- Секция 1: Белая карточка -->
+  <!-- Секция 1: Белая карточка с инициалами -->
   <div class="card-white">
     <div class="initials">Ж | Н</div>
     <div class="names">АНДРЕЙ + АНАСТАСИЯ</div>
@@ -184,8 +190,11 @@ body {
     </div>
   </div>
 
-  <!-- Секция 2: Оливковая -->
-  <div class="card-olive">
+  <!-- Оливковый разделитель -->
+  <div class="olive-divider"></div>
+
+  <!-- Секция 2: Белая карточка с приглашением -->
+  <div class="card-invite">
     <h2>Дорогой<br>Гость!</h2>
     <p>
       Мы рады сообщить Вам, что 01.02.2026 состоится самое главное торжество в
@@ -209,7 +218,10 @@ body {
     <div class="footer">Ждём Вас!</div>
   </div>
 
-  <!-- Секция 3: Серая карточка -->
+  <!-- Оливковый разделитель -->
+  <div class="olive-divider"></div>
+
+  <!-- Секция 3: Серая карточка с расписанием -->
   <div class="card-gray">
     <div class="schedule-title">Свадебное расписание</div>
 
